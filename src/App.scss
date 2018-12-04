@@ -1,33 +1,121 @@
+// https://sass-lang.com/guide implement as many as you can
+
+//importing reset a scss snippet in another file
+@import "reset";
+
 .App {
-    text-align: center;
+  text-align: center;
+}
+
+.App-logo {
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-  
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 40vmin;
+  to {
+    transform: rotate(360deg);
   }
-  
-  .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+}
+//begin scss demo based on https://sass-lang.com/guide
+//variables
+$font-stack: Helvetica, sans-serif;
+$primary-color: #61dafb;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background-color: #efefef;
+}
+//nesting
+nav {
+  ul {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
-  
-  .App-link {
-    color: #61dafb;
+
+  li {
+    display: inline-block;
   }
-  
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+
+  a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
   }
-  
+}
+//mixins
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.box {
+  @include transform(rotate(30deg));
+}
+
+/* This CSS will print because %message-shared is extended. */
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+// This CSS won't print because %equal-heights is never extended.
+%equal-heights {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.message {
+  @extend %message-shared;
+}
+
+.success {
+  @extend %message-shared;
+  border-color: green;
+}
+
+.error {
+  @extend %message-shared;
+  border-color: red;
+}
+
+.warning {
+  @extend %message-shared;
+  border-color: yellow;
+}
+
+.container {
+  width: 100%;
+}
+
+article[role="main"] {
+  float: left;
+  width: 600px / 960px * 100%;
+}
+
+aside[role="complementary"] {
+  float: right;
+  width: 300px / 960px * 100%;
+}
