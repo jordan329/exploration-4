@@ -14,18 +14,17 @@ class App extends Component {
           </ul>
         </nav>
         <header className="App-header">
+        <br></br>
+        <br></br>
+
+          <img src={logo} className="original" alt="logo" />
+          <br></br>
+          <br></br>
+          <br></br>
           <img src={logo} className="box" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Welcome to this Sass tutorial
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
           <div className="container">
             <ol>
               <li className="message">one</li>
@@ -34,8 +33,8 @@ class App extends Component {
               <li className="warning">four</li>
             </ol>
           </div>
-            <article>try me </article>
-            <aside>badaboom</aside>
+          <article>try me </article>
+          <aside>badaboom</aside>
         </header>
       </div>
     );
