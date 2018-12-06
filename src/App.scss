@@ -7,8 +7,8 @@
   text-align: center;
 }
 
-.App-logo {
-}
+// .App-logo {
+// }
 
 .App-header {
   background-color: #282c34;
@@ -57,6 +57,7 @@ nav {
   }
 
   a {
+    color: black;
     display: block;
     padding: 10px 20px;
     text-decoration: none;
@@ -68,18 +69,19 @@ nav {
   -ms-transform: $property;
   transform: $property;
   // animation: App-logo-spin infinite 20s linear;
-  height: 30vmin;
 }
 
 .box {
-  @include transform(rotate(30deg));
+  height: 30vmin;
+
+  @include transform(skew(20deg,20deg));
 }
 .original {
   height: 30vmin;
 }
 /* This CSS will print because %message-shared is extended. */
 %message-shared {
-  border: 1px solid #ccc;
+  border: 10px solid #ccc;
   padding: 10px;
 }
 
