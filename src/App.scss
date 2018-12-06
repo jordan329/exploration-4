@@ -1,21 +1,17 @@
-// https://sass-lang.com/guide implement as many as you can
-
-//importing reset a scss snippet in another file
+// importing reset a scss snippet in another file
+// this allows you to files and use them later on if perhaps you have a standard way
+// you like to do things
 @import "reset";
 
 .App {
   text-align: center;
 }
 
-// .App-logo {
-// }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -33,17 +29,21 @@
     transform: rotate(360deg);
   }
 }
-//begin scss demo based on https://sass-lang.com/guide
-//variables
+// begin scss demo based on https://sass-lang.com/guide
+
+// variables are declared like so
 $font-stack: Helvetica, sans-serif;
 $primary-color: #61dafb;
-
+// end of declarations
+// here is how you use variables
 body {
   font: 100% $font-stack;
   color: $primary-color;
   background-color: #efefef;
 }
-//nesting
+// end of valiables section
+// in Sass you can nest selectors it really cleans up syntax and makes things look great
+// nesting
 nav {
   ul {
     text-align: left;
@@ -63,22 +63,24 @@ nav {
     text-decoration: none;
   }
 }
-//mixins
+// end nesting
+// mixins, a mixin is similar to a function you pass variables to the mixin and then can apply multiple lines of code to a selector easily
 @mixin transform($property) {
   -webkit-transform: $property;
   -ms-transform: $property;
   transform: $property;
   // animation: App-logo-spin infinite 20s linear;
 }
-
 .box {
   height: 30vmin;
-
-  @include transform(skew(20deg,20deg));
+  @include transform(skew(20deg, 20deg));
 }
+//end of mixins
 .original {
   height: 30vmin;
 }
+// inheritance is another feature of Sass
+// % before what looks like a selector makes a "class" that can be inhereted later using the @extend keyword
 /* This CSS will print because %message-shared is extended. */
 %message-shared {
   border: 10px solid #ccc;
@@ -109,17 +111,25 @@ nav {
   @extend %message-shared;
   border-color: yellow;
 }
-
+// end inheritance
 .container {
   width: 100%;
 }
+// you can also do math in Sass which is incredibly convienient
+// an example is shown below
+.left {
+  @extend %message-shared;
 
-article[role="main"] {
   float: left;
+  border-color: orangered;
   width: 600px / 960px * 100%;
 }
 
-aside[role="complementary"] {
+.right {
+  @extend %message-shared;
+
   float: right;
+  border-color: teal;
+
   width: 300px / 960px * 100%;
 }

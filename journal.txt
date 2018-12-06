@@ -8,6 +8,7 @@ Sources:
 https://hackernoon.com/using-sass-with-create-react-app-without-ejecting-b5f4f827ed9e
 https://reactjs.org/blog/2018/10/01/create-react-app-v2.html
 https://sass-lang.com/guide
+https://www.w3schools.com/cssref/
 
 I wanted to use react because I like it it makes front end easy for me, and firebase hosting for easy https and quick deployment.
 
@@ -21,6 +22,10 @@ very straight forward installation and then all the information you need to impl
     https://sass-lang.com/guide
 
 In fact all I did in my code was use the features as detailed in this tutorial and then play around with it and try to break it/ make stuff look strange.
+
+So to follow along if you open the _reset.scss file and the app.scss file I've explained what happens in the comments on each of those files. 
+They really don't make sense without the code next to it so please look in those files to understand what is going on
+
 
 Please note that if you've visited the URL provided before and you DON'T SEE A PINK SASS LOGO you need to CLEAR YOUR CACHE or load the page in an incognito tab/window
 Enjoy the final product.

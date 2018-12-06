@@ -32,8 +32,8 @@ class App extends Component {
               <li className="warning">four</li>
             </ol>
           </div>
-          <article>try me </article>
-          <aside>badaboom</aside>
+          <article className="left">try me </article>
+          <aside className="right">badaboom</aside>
         </header>
       </div>
     );
