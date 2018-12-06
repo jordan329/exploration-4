@@ -1,3 +1,0 @@
-https://hackernoon.com/using-sass-with-create-react-app-without-ejecting-b5f4f827ed9e
-https://reactjs.org/blog/2018/10/01/create-react-app-v2.html
-https://sass-lang.com/guide
